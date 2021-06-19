@@ -1,0 +1,134 @@
+:root {
+  --form-primary: #00b0ff;
+  --form-primary-fade: rgba(0, 176, 255, 0.2);
+  --form-light: #e8e9ee;
+}
+
+*,
+input,
+button {
+  font-family: "Poppins";
+}
+
+#page-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+/*cover container*/
+
+#img-container {
+  background: rgba(0, 176, 255, 0.2);
+  display: grid;
+  place-items: center;
+}
+
+#form-container,
+#img-container {
+  height: 50vh;
+  width: 100%;
+}
+
+/*form container*/
+
+#form-container {
+  background-color: var(--form-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand {
+  color: var(--form-primary);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.submit-btn {
+  background: var(--form-primary);
+  color: #fff;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #1db7ff;
+  color: #fff;
+}
+
+.or {
+  position: relative;
+  width: 70%;
+}
+.or::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 0;
+  height: 1px;
+  width: 40%;
+  background: #707070;
+}
+
+.or::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 0;
+  height: 1px;
+  width: 40%;
+  background: #707070;
+}
+
+.alt-login,
+.alt-login:hover {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #000;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.alt-login svg {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-text {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.footer-text .register-link {
+  color: var(--form-primary);
+  text-decoration: none;
+}
+
+.footer-text .register-link:hover {
+  text-decoration: none;
+}
+
+/* media queries*/
+@media (min-width: 600px) {
+  #page-container {
+    display: flex;
+  }
+
+  #form-container,
+  #img-container {
+    flex: 1;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 600px) {
+  #form-container {
+    height: 100vh;
+  }
+}

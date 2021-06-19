@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/style.css" rel="stylesheet" />
+<div class="form-horizontal">
+    <form align="center">
+        <h1 class="brand my-5">Choose adding method</h1>
+        <br />
+
+        <a class="btn btn-primary col-md-2" href="@Url.Action("Create","Home")" role="button">
+            Create with ui
+        </a><br />
+
+        <a class="btn btn-primary col-md-2" href="@Url.Action("XmlView","Home")" role="button">
+            Import from xml file
+        </a><br />
+
+        <a class="btn btn-primary col-md-2" href="@Url.Action("ImportCsv","Home")" role="button">
+            import csv file
+        </a><br />
+    </form>
+</div>

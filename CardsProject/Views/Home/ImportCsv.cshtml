@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    @if (TempData["CsvError"] != null)
+    {
+        <script src="~/Content/sweetalert2/sweetalert2.min.js"></script>
+        <link href="~/Content/sweetalert2/sweetalert2.css" rel="stylesheet" />
+        <script src="~/Scripts/jquery-3.1.1.js"></script>
+        <script>
+            alert('the file must be .csv')
+        </script>
+}
+</head>
+<body>
+    <div>
+
+
+        @using (Html.BeginForm("UploadCsv", "home", FormMethod.Post, new { enctype = "multipart/form-data", align = "center" }))
+        {
+            <h1 class="brand my-5">Upload a CSV file</h1>
+            <br />
+            <input type="file" name="postedFile" class="form-control" />
+            <br />
+            <input type="submit" value="Upload" class="btn btn-primary col-md-2" />
+        }
+    </div>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-around">
+            <a href="Index" class="btn btn-outline-info">Home</a>
+        </div>
+    </div>
+</body>
+</html>

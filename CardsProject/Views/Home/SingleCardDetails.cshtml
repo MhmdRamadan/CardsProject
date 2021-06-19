@@ -1,0 +1,84 @@
+﻿@model CardsProject.Models.BusinessCard
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+    @using (Html.BeginForm("XMlCreateCard", "Home", FormMethod.Post, new { enctype = "multipart/form-data", align = "center" }))
+    {
+        <h1 class="brand my-5">Card details</h1>
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DOB)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DOB)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+            <dt>
+                @Html.DisplayFor(model => model.Phone)
+            </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+            <dt>
+                @Html.DisplayFor(model => model.Address)
+            </dt>
+
+
+
+        </dl>
+        <div class="form-group">
+            
+                <input type="submit" value="Create" class="btn btn-primary col-md-12" />
+          
+        </div>
+    }
+    <div class="container-fluid">
+    <div class="d-flex justify-content-around">
+        <a href="XmlView" class="btn btn-outline-info">Choose another file</a>
+        </div>
+        </div>
+</body>
+</html>
